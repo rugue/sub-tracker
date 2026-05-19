@@ -12,5 +12,11 @@ subscriptionRouter.put('/:id', (req, res) => res.send({message: 'Subscription up
 
 subscriptionRouter.delete('/:id', (req, res) => res.send({message: 'Subscription deleted'}));
 
+subscriptionRouter.get('/user/:id', (req, res) => res.send({message: 'Subscriptions by user id'}));
+
+subscriptionRouter.put('/:id/cancel', (req, res) => res.send({message: 'Subscription cancelled'}));
+
+subscriptionRouter.get('/upcoming-renewals', (req, res) => res.send({message: 'Upcoming renewals'}));
+
 
 export default subscriptionRouter;
